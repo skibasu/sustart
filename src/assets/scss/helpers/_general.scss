@@ -1,0 +1,141 @@
+//
+// ----------------------------------------
+// GENERAL
+//
+// The most general styles for
+// <html>, <body> and .container
+//
+// Set font and clear body padding
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+}
+
+html,
+button,
+a,
+input,
+select,
+textarea {
+    font-family: $font-family-base;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -ms-scroll-limit-x-max: 100%;
+    -ms-scroll-limit-x-min: 0;
+
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color-base;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include mq(sm) {
+        max-width: 540px;
+    }
+
+    @include mq(md) {
+        max-width: 720px;
+    }
+
+    @include mq(lg) {
+        max-width: 960px;
+    }
+
+    @include mq(xl) {
+        max-width: 1140px;
+    }
+
+    &-fluid {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+figure {
+    margin: 0;
+}
+// Make all images responsive
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Normalize links across browsers
+a {
+    color: $link-color; //inherit;
+    text-decoration: none;
+    outline: none;
+
+    img {
+        border: 0;
+    }
+    a:focus,
+    a:hover,
+    a:active {
+        color: $link-hover-color;
+        outline: none;
+    }
+}
+
+// Inputs
+textarea,
+input[type="“text”"],
+input[type="“button”"],
+input[type="“submit”"],
+input[type="“search”"] {
+    border-radius: 0;
+
+    -webkit-appearance: none;
+}
+::-ms-clear {
+    display: none;
+}
+// Make inputs on iOS look normal
+input {
+    &:not([type="checkbox"]):not([type="radio"]) {
+        -webkit-appearance: none;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+        margin-bottom: 0;
+        &:before {
+            display: none;
+        }
+    }
+    a {
+        color: inherit;
+    }
+}
+.slick-slide,
+.slick-slide * {
+    outline: none !important;
+}
+.page {
+    min-height: 100vh;
+}

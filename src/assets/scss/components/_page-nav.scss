@@ -1,0 +1,9 @@
+.page-nav {
+    color: $black;
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 40px;
+    &__list-elem:not(:last-child) {
+        margin-right: 15px;
+    }
+}

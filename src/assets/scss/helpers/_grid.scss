@@ -1,0 +1,22 @@
+.row {
+    margin: 0 -15px;
+    padding: 0 15px;
+}
+
+.col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    &-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    &-6 {
+        flex: 0 0 calc(6 / 12 * 100%);
+        max-width: calc(6 / 12 * 100%);
+    }
+    &-4 {
+        flex: 0 0 calc(4 / 12 * 100%);
+        max-width: calc(4 / 12 * 100%);
+    }
+}

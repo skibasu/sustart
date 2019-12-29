@@ -1,0 +1,9 @@
+@mixin mq($vp) {
+	@media all and (min-width: map-get($breakpoints, $vp)) {
+		@content;
+	}
+}
+
+@mixin font-size($fs, $fe) {
+	font-size: calc(#{$fs} * 1px + (#{$fe} - #{$fs}) * ((100vw - 480px) / (1430 - 480)));
+}
