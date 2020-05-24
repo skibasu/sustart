@@ -1,13 +1,15 @@
 import ScreenLock from "./modules/screenLock";
 
 // ready
-document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener("DOMContentLoaded", () => { });
 
 // load
-document.addEventListener("load", () => {});
+window.addEventListener("load", () => {
+    console.log('load');
+});
 
 // scroll
-window.addEventListener("scroll", () => {});
+window.addEventListener("scroll", () => { });
 
 // resize
-window.addEventListener("resize", () => {});
+window.addEventListener("resize", () => { });
